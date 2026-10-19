@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StudySpace AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         MAIN WRAPPER
+    ========================================== -->
+
+    <main class="page">
+
+        <!-- =====================================
+             TOP NAVIGATION
+        ====================================== -->
+
+        <header class="topbar">
+
+            <div class="brand">
+
+                <span class="brand-mark">✦</span>
+
+                <div>
+                    <span class="brand-name">
+                        STUDYSPACE
+                    </span>
+
+                    <span class="brand-subtitle">
+                        AI STUDY ASSISTANT
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="chapter-status">
+
+                <span class="status-dot"></span>
+
+                <span>
+                    05 CHAPTERS READY
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             HERO SECTION
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="hero-number">
+                STUDY / 01
+            </div>
+
+
+            <h1>
+
+                YOUR
+                <span>KNOWLEDGE</span>
+                <br>
+                COMPANION
+
+            </h1>
+
+
+            <div class="hero-line"></div>
+
+
+            <p class="hero-description">
+
+                Ask questions from your study chapters,
+                explore concepts, and understand difficult
+                topics with the help of AI.
+
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             QUESTION AREA
+        ====================================== -->
+
+        <section class="question-section">
+
+            <div class="section-label">
+
+                <span>01</span>
+
+                ASK YOUR ASSISTANT
+
+            </div>
+
+
+            <div class="question-box">
+
+                <textarea
+                    id="questionInput"
+                    placeholder="What would you like to understand?"
+                    rows="3"
+                ></textarea>
+
+
+                <div class="question-footer">
+
+                    <span class="hint">
+                        Ask anything from your 5 study chapters
+                    </span>
+
+
+                    <button
+                        id="askButton"
+                        type="button"
+                    >
+
+                        <span>ASK AI</span>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             SUGGESTED QUESTIONS
+        ====================================== -->
+
+        <section class="suggestions">
+
+            <div class="section-label">
+
+                <span>02</span>
+
+                TRY ASKING
+
+            </div>
+
+
+            <div class="suggestion-grid">
+
+                <button
+                    class="suggestion"
+                    data-question="What is Artificial Intelligence?"
+                >
+
+                    <span class="suggestion-number">
+                        01
+                    </span>
+
+                    <span>
+                        What is Artificial Intelligence?
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-question="What is Machine Learning?"
+                >
+
+                    <span class="suggestion-number">
+                        02
+                    </span>
+
+                    <span>
+                        What is Machine Learning?
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-question="What is Deep Learning?"
+                >
+
+                    <span class="suggestion-number">
+                        03
+                    </span>
+
+                    <span>
+                        What is Deep Learning?
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-question="What is Natural Language Processing?"
+                >
+
+                    <span class="suggestion-number">
+                        04
+                    </span>
+
+                    <span>
+                        What is NLP?
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="suggestion"
+                    data-question="What is Retrieval-Augmented Generation?"
+                >
+
+                    <span class="suggestion-number">
+                        05
+                    </span>
+
+                    <span>
+                        What is RAG?
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ANSWER SECTION
+        ====================================== -->
+
+        <section
+            class="answer-section"
+            id="answerSection"
+        >
+
+            <div class="section-label">
+
+                <span>03</span>
+
+                AI RESPONSE
+
+            </div>
+
+
+            <div class="answer-layout">
+
+                <article class="answer-card">
+
+                    <div class="answer-heading">
+
+                        <span class="answer-symbol">
+                            ✦
+                        </span>
+
+                        <span>
+                            ANSWER
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="answerContent"
+                        class="answer-content"
+                    >
+
+                        <p class="empty-answer">
+
+                            Your answer will appear here.
+
+                            <br><br>
+
+                            Ask a question to begin
+                            exploring your study material.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SOURCES -->
+
+                <aside class="sources-card">
+
+                    <div class="sources-heading">
+
+                        <span>
+                            SOURCES
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="sourcesContent"
+                        class="sources-content"
+                    >
+
+                        <p class="empty-sources">
+                            Sources will appear here.
+                        </p>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CHAPTERS
+        ====================================== -->
+
+        <section class="chapters-section">
+
+            <div class="section-label">
+
+                <span>04</span>
+
+                YOUR STUDY MATERIAL
+
+            </div>
+
+
+            <div class="chapter-grid">
+
+                <div class="chapter-card">
+
+                    <span class="chapter-number">
+                        01
+                    </span>
+
+                    <span class="chapter-name">
+                        Artificial Intelligence
+                    </span>
+
+                </div>
+
+
+                <div class="chapter-card">
+
+                    <span class="chapter-number">
+                        02
+                    </span>
+
+                    <span class="chapter-name">
+                        Machine Learning
+                    </span>
+
+                </div>
+
+
+                <div class="chapter-card">
+
+                    <span class="chapter-number">
+                        03
+                    </span>
+
+                    <span class="chapter-name">
+                        Deep Learning
+                    </span>
+
+                </div>
+
+
+                <div class="chapter-card">
+
+                    <span class="chapter-number">
+                        04
+                    </span>
+
+                    <span class="chapter-name">
+                        Natural Language Processing
+                    </span>
+
+                </div>
+
+
+                <div class="chapter-card">
+
+                    <span class="chapter-number">
+                        05
+                    </span>
+
+                    <span class="chapter-name">
+                        Retrieval-Augmented Generation
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer class="footer">
+
+            <span>
+                STUDYSPACE AI
+            </span>
+
+            <span>
+                RAG • LOCAL EMBEDDINGS • GROQ
+            </span>
+
+            <span>
+                2026
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
